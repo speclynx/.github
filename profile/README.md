@@ -17,15 +17,15 @@ Join our [waitlist](https://speclynx.com/) to get early access to SpecLynx OpenA
 
 Have questions or want to share your thoughts? Join our [Discussions](https://github.com/orgs/speclynx/discussions) to engage with the community!
 
-### Get in Touch
-
-- **Website**: https://speclynx.com
-- **Email**: info@speclynx.com
-
 ### Who we are
 
 SpecLynx is a developer-focused organization founded by [Vladimír Gorej](https://vladimirgorej.com/) and [Francesco Tumanischvili](https://github.com/frantuma), two industry veterans with over 15 years of combined experience maintaining and advancing core tools in the Swagger/OpenAPI ecosystem.
 Their unparalleled expertise ensures you receive a solutions with battle-tested reliability and best practices meticulously baked into every feature.
+
+### Get in Touch
+
+- **Website**: https://speclynx.com
+- **Email**: info@speclynx.com
 
 ### Supported by
 

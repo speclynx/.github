@@ -11,8 +11,6 @@ Welcome to SpecLynx, an organization dedicated to developing products and librar
 First project we're rolling out is [**SpecLynx OpenAPI Toolkit**](https://github.com/speclynx/vscode-openapi-toolkit) - The OpenAPI Powerhouse for VSCode. 
 SpecLynx OpenAPI Toolkit delivers the most effective way to author and manage your API specs, bringing unprecedented ease, pinpoint accuracy, and unmatched power directly to your VSCode workflow.
 
-Join our [waitlist](https://speclynx.com/) to get early access to SpecLynx OpenAPI Toolkit in August 2025.
-
 ### Join the Discussion
 
 Have questions or want to share your thoughts? Join our [Discussions](https://github.com/orgs/speclynx/discussions) to engage with the community!

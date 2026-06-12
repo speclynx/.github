@@ -67,7 +67,7 @@ In use by teams building API tooling and internal platforms.
   <img height="36" alt="Jentic" src="https://speclynx.com/assets/images/logos/jentic-logo.svg" />
 </a>
 
-<sub>Powering [Arazzo Tools](https://github.com/jentic/jentic-arazzo-tools) &amp; [API Scorecard](https://jentic.com/scorecard) at [Jentic](https://jentic.com).</sub>
+<sub>Powering [Arazzo Tools](https://github.com/jentic/jentic-arazzo-tools) &amp; [API Scorecard](https://jentic.com/scorecard).</sub>
 
 ## Who we are
 

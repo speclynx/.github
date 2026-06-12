@@ -23,11 +23,11 @@ Parse, validate, transform, and work with **OpenAPI**, **AsyncAPI**, **Arazzo**,
 <br/>
 
 <div align="center">
-  <a href="https://www.openapis.org/"><img height="44" alt="OpenAPI" src="https://speclynx.com/assets/images/logos/openapi-logo.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.asyncapi.com/"><img height="44" alt="AsyncAPI" src="https://speclynx.com/assets/images/logos/asyncapi-logo.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://spec.openapis.org/arazzo/latest.html"><img height="44" alt="Arazzo" src="https://speclynx.com/assets/images/logos/arazzo-logo.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://spec.openapis.org/overlay/latest.html"><img height="44" alt="Overlay" src="https://speclynx.com/assets/images/logos/overlay-logo.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://json-schema.org/"><img height="44" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" /></a>
+  <a href="https://www.openapis.org/"><img height="36" alt="OpenAPI" src="https://speclynx.com/assets/images/logos/openapi-logo.png" /></a>&nbsp;&nbsp;
+  <a href="https://www.asyncapi.com/"><img height="36" alt="AsyncAPI" src="https://speclynx.com/assets/images/logos/asyncapi-logo.svg" /></a>&nbsp;&nbsp;
+  <a href="https://spec.openapis.org/arazzo/latest.html"><img height="36" alt="Arazzo" src="https://speclynx.com/assets/images/logos/arazzo-logo.png" /></a>&nbsp;&nbsp;
+  <a href="https://spec.openapis.org/overlay/latest.html"><img height="36" alt="Overlay" src="https://speclynx.com/assets/images/logos/overlay-logo.svg" /></a>&nbsp;&nbsp;
+  <a href="https://json-schema.org/"><img height="36" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" /></a>
 </div>
 
 ## Products

@@ -30,8 +30,6 @@ Parse, validate, transform, and work with **OpenAPI**, **AsyncAPI**, **Arazzo**,
   <img height="44" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" />
 </div>
 
-<p align="center"><sub>Full support for Swagger 2.0, OpenAPI 3.0.x &amp; 3.1.x, AsyncAPI 2.x, Arazzo 1.x, Overlay, and JSON Schema — in JSON or YAML.</sub></p>
-
 ## Products
 
 SpecLynx builds parsers, semantic data models, and intelligent editing tools for API specifications — from a low-level semantic parser all the way up to a browser-based editor.

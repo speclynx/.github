@@ -1,9 +1,5 @@
 <div align="center">
 
-<a href="https://speclynx.com">
-  <img width="280" alt="SpecLynx" src="https://speclynx.com/assets/images/logos/speclynx-logo.svg" />
-</a>
-
 <h1>SpecLynx</h1>
 
 ### Enterprise-ready API tooling

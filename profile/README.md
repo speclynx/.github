@@ -52,7 +52,7 @@ Teams end up with separate scripts for bundling, linting, converting, and releas
 
 ### Local-first by default
 
-<p align="center">
+<p align="left">
   <img alt="Runs locally" src="https://img.shields.io/badge/Runs_locally-3A97CC?style=for-the-badge" />
   <img alt="Works offline" src="https://img.shields.io/badge/Works_offline-3A97CC?style=for-the-badge" />
   <img alt="No accounts" src="https://img.shields.io/badge/No_accounts-092B4E?style=for-the-badge" />

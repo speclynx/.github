@@ -22,8 +22,6 @@ Parse, validate, transform, and work with **OpenAPI**, **AsyncAPI**, **Arazzo**,
 
 <br/>
 
-## Supported specifications
-
 <div align="center">
   <img height="44" alt="OpenAPI" src="https://speclynx.com/assets/images/logos/openapi-logo.png" />&nbsp;&nbsp;&nbsp;&nbsp;
   <img height="44" alt="AsyncAPI" src="https://speclynx.com/assets/images/logos/asyncapi-logo.svg" />&nbsp;&nbsp;&nbsp;&nbsp;

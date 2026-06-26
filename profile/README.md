@@ -59,16 +59,6 @@ Teams end up with separate scripts for bundling, linting, converting, and releas
   <img alt="No telemetry" src="https://img.shields.io/badge/No_telemetry-092B4E?style=for-the-badge" />
 </p>
 
-## Trusted by
-
-In use by teams building API tooling and internal platforms.
-
-<a href="https://jentic.com">
-  <img height="36" alt="Jentic" src="https://speclynx.com/assets/images/logos/jentic-logo.svg" />
-</a>
-
-<sub>Powering [Arazzo Tools](https://github.com/jentic/jentic-arazzo-tools) &amp; [API Scorecard](https://jentic.com/scorecard).</sub>
-
 ## Who we are
 
 SpecLynx was founded by [Vladimir Gorej](https://vladimirgorej.com/) and [Francesco Tumanischvili](https://github.com/frantuma), two industry veterans with over 15 years of combined experience building and maintaining core tools in the Swagger/OpenAPI ecosystem.
@@ -77,9 +67,9 @@ SpecLynx was founded by [Vladimir Gorej](https://vladimirgorej.com/) and [France
 
 Have questions or want to share your thoughts? Join our [Discussions](https://github.com/orgs/speclynx/discussions) to engage with the community.
 
-## Work with us
+## Get help from the maintainers
 
-SpecLynx is free to use. We help teams integrate it into internal tooling, standardize API and workflow specifications, and adopt it across their platform.
+SpecLynx is free to use. We can help developers and teams integrate the tooling, standardize API and workflow specifications, and adopt it across their platform.
 
 - **Website**: https://speclynx.com
 - **Email**: info@speclynx.com

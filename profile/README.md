@@ -59,6 +59,8 @@ npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
 
 Prefer a UI? Open the [Editor](https://editor.speclynx.com) in your browser, or install the [OpenAPI Toolkit](https://speclynx.com/openapi-toolkit/) for VS Code. More in the [getting started guide](https://speclynx.com/docs/guides/getting-started/).
 
+<a href="https://editor.speclynx.com"><img width="795" alt="SpecLynx Editor in the browser, editing an OpenAPI document with a live API reference preview" src="https://editor.speclynx.com/speclynx-editor.png" /></a>
+
 ## The tools
 
 SpecLynx combines core tooling, developer workflows, and editing surfaces into one consistent stack, plus a workflow toolkit built on top of it. All of it is open source under Apache 2.0.

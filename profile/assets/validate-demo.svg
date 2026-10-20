@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="795" height="204" viewBox="0 0 795 204" role="img" aria-label="speclynx validate: npx @speclynx/cli validate openapi.yaml, npx @speclynx/cli validate asyncapi.yaml, npx @speclynx/cli validate arazzo.yaml, npx @speclynx/cli validate overlay.yaml">
+  <style>
+    @keyframes f0{0%,25.373%{opacity:1}25.378%,100%{opacity:0}}
+    @keyframes t0{0%,2.490%{transform:translateX(0);animation-timing-function:steps(39,end)}8.154%,100%{transform:translateX(328.8px)}}
+    @keyframes o0{0%,9.606%{opacity:0}9.610%,100%{opacity:1}}
+    @keyframes c0{0%,9.606%{opacity:1}9.610%,100%{opacity:0}}
+    .f0{animation:f0 24.10s linear infinite}.t0{animation:t0 24.10s linear infinite}.o0{animation:o0 24.10s linear infinite}.c0{animation:c0 24.10s linear infinite}
+    @keyframes f1{0%,25.373%{opacity:0}25.378%,50.394%{opacity:1}50.398%,100%{opacity:0}}
+    @keyframes t1{0%,27.863%{transform:translateX(0);animation-timing-function:steps(40,end)}33.672%,100%{transform:translateX(337.2px)}}
+    @keyframes o1{0%,35.124%{opacity:0}35.129%,100%{opacity:1}}
+    @keyframes c1{0%,35.124%{opacity:1}35.129%,100%{opacity:0}}
+    .f1{animation:f1 24.10s linear infinite}.t1{animation:t1 24.10s linear infinite}.o1{animation:o1 24.10s linear infinite}.c1{animation:c1 24.10s linear infinite}
+    @keyframes f2{0%,50.394%{opacity:0}50.398%,75.124%{opacity:1}75.129%,100%{opacity:0}}
+    @keyframes t2{0%,52.884%{transform:translateX(0);animation-timing-function:steps(38,end)}58.402%,100%{transform:translateX(320.3px)}}
+    @keyframes o2{0%,59.855%{opacity:0}59.859%,100%{opacity:1}}
+    @keyframes c2{0%,59.855%{opacity:1}59.859%,100%{opacity:0}}
+    .f2{animation:f2 24.10s linear infinite}.t2{animation:t2 24.10s linear infinite}.o2{animation:o2 24.10s linear infinite}.c2{animation:c2 24.10s linear infinite}
+    @keyframes f3{0%,75.124%{opacity:0}75.129%,100.000%{opacity:1}100.004%,100%{opacity:0}}
+    @keyframes t3{0%,77.614%{transform:translateX(0);animation-timing-function:steps(39,end)}83.278%,100%{transform:translateX(328.8px)}}
+    @keyframes o3{0%,84.730%{opacity:0}84.734%,100%{opacity:1}}
+    @keyframes c3{0%,84.730%{opacity:1}84.734%,100%{opacity:0}}
+    .f3{animation:f3 24.10s linear infinite}.t3{animation:t3 24.10s linear infinite}.o3{animation:o3 24.10s linear infinite}.c3{animation:c3 24.10s linear infinite}
+    .blink{animation:blink 1s steps(2,start) infinite}
+    @keyframes blink{to{visibility:hidden}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <clipPath id="w"><rect width="795" height="204" rx="8"/></clipPath>
+  <g clip-path="url(#w)">
+    <rect width="795" height="204" fill="#1F2937"/>
+    <rect width="795" height="36" fill="#111827"/>
+    <rect y="35" width="795" height="1" fill="#374151"/>
+  </g>
+  <circle cx="20" cy="18" r="5.5" fill="#FF5F56"/><circle cx="38" cy="18" r="5.5" fill="#FFBD2E"/><circle cx="56" cy="18" r="5.5" fill="#27C93F"/>
+  <text x="74" y="22" fill="#9CA3AF" font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="12">speclynx validate</text>
+  <g font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="14" xml:space="preserve">
+  <g class="f0">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli validate </text><text x="266.5" y="70" fill="#C9D1D9">openapi.yaml</text>
+    <g class="t0" transform="translate(328.8 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c0" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o0">
+    <text x="22.0" y="92" fill="#AEB6C2">openapi.yaml</text>
+    <text x="38.9" y="114" fill="#AEB6C2">2:1-2:5    </text><text x="131.6" y="114" fill="#F87171">error</text><text x="190.6" y="114" fill="#3DD6EE">3030501</text><text x="266.5" y="114" fill="#E5E7EB">should always have a 'version'</text>
+    <text x="38.9" y="136" fill="#AEB6C2">7:20-7:22  </text><text x="131.6" y="136" fill="#F87171">error</text><text x="190.6" y="136" fill="#3DD6EE">3080500</text><text x="266.5" y="136" fill="#E5E7EB">operationId must be a string</text>
+    
+    <text x="22.0" y="180" fill="#F87171" font-weight="700">✖ 2 problems (2 errors)</text>
+    </g>
+  </g>
+  <g class="f1" opacity="0">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli validate </text><text x="266.5" y="70" fill="#C9D1D9">asyncapi.yaml</text>
+    <g class="t1" transform="translate(337.2 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c1" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o1">
+    <text x="22.0" y="92" fill="#AEB6C2">asyncapi.yaml</text>
+    <text x="38.9" y="114" fill="#AEB6C2">6:3-6:13  </text><text x="123.2" y="114" fill="#F87171">error</text><text x="182.2" y="114" fill="#3DD6EE">100201</text><text x="249.6" y="114" fill="#E5E7EB">should always have a 'protocol'</text>
+    
+    <text x="22.0" y="158" fill="#F87171" font-weight="700">✖ 1 problem (1 error)</text>
+    </g>
+  </g>
+  <g class="f2" opacity="0">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli validate </text><text x="266.5" y="70" fill="#C9D1D9">arazzo.yaml</text>
+    <g class="t2" transform="translate(320.3 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c2" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o2">
+    <text x="22.0" y="92" fill="#AEB6C2">arazzo.yaml</text>
+    <text x="38.9" y="114" fill="#AEB6C2">19:9-21:1  </text><text x="131.6" y="114" fill="#FBBF24">warning</text><text x="207.5" y="114" fill="#3DD6EE">9050201</text><text x="283.3" y="114" fill="#E5E7EB">Step 'description' should be present and non-empty string.</text>
+    
+    <text x="22.0" y="158" fill="#FBBF24" font-weight="700">⚠ 1 problem (1 warning)</text>
+    </g>
+  </g>
+  <g class="f3" opacity="0">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli validate </text><text x="266.5" y="70" fill="#C9D1D9">overlay.yaml</text>
+    <g class="t3" transform="translate(328.8 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c3" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o3">
+    <text x="22.0" y="92" fill="#AEB6C2">overlay.yaml</text>
+    <text x="38.9" y="114" fill="#AEB6C2">11:13-11:16  </text><text x="148.4" y="114" fill="#F87171">error</text><text x="207.5" y="114" fill="#3DD6EE">10030500</text><text x="291.8" y="114" fill="#E5E7EB">remove must be a boolean</text>
+    
+    <text x="22.0" y="158" fill="#F87171" font-weight="700">✖ 1 problem (1 error)</text>
+    </g>
+  </g>
+  </g>
+</svg>

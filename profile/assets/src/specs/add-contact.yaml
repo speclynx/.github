@@ -1,0 +1,9 @@
+overlay: 1.0.0
+info:
+  title: Add API contact
+  version: 1.0.0
+actions:
+  - target: $.info
+    update:
+      contact:
+        email: api@museum.example

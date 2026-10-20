@@ -41,7 +41,7 @@ Validate any spec from the terminal. Nothing to install, no account. Works the s
 npx @speclynx/cli validate openapi.yaml
 ```
 
-<img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" />
+<a href="https://speclynx.com/cli/"><img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" /></a>
 
 Apply or generate overlays:
 
@@ -50,7 +50,7 @@ npx @speclynx/cli overlay apply add-contact.yaml museum.yaml
 npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
 ```
 
-<img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay.svg" />
+<a href="https://speclynx.com/cli/"><img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay.svg" /></a>
 
 Prefer a UI? Open the [Editor](https://editor.speclynx.com) in your browser, or install the [OpenAPI Toolkit](https://speclynx.com/openapi-toolkit/) for VS Code. More in the [getting started guide](https://speclynx.com/docs/guides/getting-started/).
 
@@ -78,21 +78,38 @@ Your API specs may be standardized, but the tooling around them rarely is. Every
 - **Built by the people who built the ecosystem** — the team behind years of core Swagger, OpenAPI, and AsyncAPI tooling. [Meet the team →](https://speclynx.com/about/)
 
 <p align="left">
-  <img alt="Runs locally" src="https://img.shields.io/badge/Runs_locally-3A97CC?style=for-the-badge" />
-  <img alt="Works offline" src="https://img.shields.io/badge/Works_offline-3A97CC?style=for-the-badge" />
-  <img alt="No accounts" src="https://img.shields.io/badge/No_accounts-092B4E?style=for-the-badge" />
-  <img alt="No telemetry" src="https://img.shields.io/badge/No_telemetry-092B4E?style=for-the-badge" />
+  <a href="https://speclynx.com/manifesto/"><img alt="Runs locally" src="https://img.shields.io/badge/Runs_locally-3A97CC?style=for-the-badge" /></a>
+  <a href="https://speclynx.com/manifesto/"><img alt="Works offline" src="https://img.shields.io/badge/Works_offline-3A97CC?style=for-the-badge" /></a>
+  <a href="https://speclynx.com/manifesto/"><img alt="No accounts" src="https://img.shields.io/badge/No_accounts-092B4E?style=for-the-badge" /></a>
+  <a href="https://speclynx.com/manifesto/"><img alt="No telemetry" src="https://img.shields.io/badge/No_telemetry-092B4E?style=for-the-badge" /></a>
 </p>
 
 ## What people say
 
-> Since my days at Apiary and Swagger, I've been looking for OpenAPI tooling I'd actually recommend. SpecLynx is it, and no wonder: it's built by many of the same people. The editor, CLI, and VS Code extension share one engine, so the whole toolchain just makes sense. I'll be using it in my consulting and training.
->
-> — **Emmanuel Paraskakis**, Consultant, Trainer, Advisor · Founder, [Level 250](https://www.level250.com/)
+<table>
+<tr>
+<td width="50%" valign="top">
 
-> When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling around it: every standard got its own parser, validator and set of quirks. SpecLynx is the toolchain I wish had existed back then, with one consistent model across OpenAPI, AsyncAPI and Arazzo.
->
-> — **Fran Mendez**, AsyncAPI author · Building [usecommune.com](https://usecommune.com/)
+Since my days at Apiary and Swagger, I've been looking for OpenAPI tooling I'd actually recommend. SpecLynx is it, and no wonder: it's built by many of the same people. The editor, CLI, and VS Code extension share one engine, so the whole toolchain just makes sense. I'll be using it in my consulting and training.
+
+<img width="44" height="44" align="left" alt="Emmanuel Paraskakis" src="assets/testimonials/emmanuel-paraskakis.svg" />
+
+**Emmanuel Paraskakis**<br/>
+<sub>Consultant, Trainer, Advisor · Founder, [Level 250](https://www.level250.com/)</sub>
+
+</td>
+<td width="50%" valign="top">
+
+When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling around it: every standard got its own parser, validator and set of quirks. SpecLynx is the toolchain I wish had existed back then, with one consistent model across OpenAPI, AsyncAPI and Arazzo.
+
+<img width="44" height="44" align="left" alt="Fran Mendez" src="assets/testimonials/fran-mendez.svg" />
+
+**Fran Mendez**<br/>
+<sub>AsyncAPI author · Building [usecommune.com](https://usecommune.com/)</sub>
+
+</td>
+</tr>
+</table>
 
 ## Built in the open
 

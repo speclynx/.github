@@ -6,6 +6,8 @@
 //   the dark variant renders the navy parts (wordmark, inner mark) light.
 // - <spec>-logo-dark.{svg,png}: spec logos with their dark wordmark rendered light,
 //   for GitHub dark mode. Light mode keeps using the originals from speclynx.com.
+// - ../testimonials/<name>.svg: testimonial photos cropped to a circle, as on speclynx.com
+//   (GitHub strips the CSS the website uses for that).
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, mkdtempSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
@@ -88,6 +90,20 @@ for (const [name, colors] of Object.entries(SVG_DARK_COLORS)) {
 
 for (const name of ['openapi-logo.png', 'arazzo-logo.png']) {
   write(name.replace('.png', '-dark.png'), PNG.sync.write(recolor(PNG.sync.read(await fetchBuffer(name)), neutralDark)));
+}
+
+const TESTIMONIALS = join(OUT, '..', 'testimonials');
+mkdirSync(TESTIMONIALS, { recursive: true });
+for (const name of ['emmanuel-paraskakis', 'fran-mendez']) {
+  const res = await fetch(`https://speclynx.com/assets/images/testimonials/${name}.webp`);
+  if (!res.ok) throw new Error(`${name}: HTTP ${res.status}`);
+  const photo = Buffer.from(await res.arrayBuffer()).toString('base64');
+  writeFileSync(join(TESTIMONIALS, `${name}.svg`), `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <clipPath id="c"><circle cx="50" cy="50" r="50"/></clipPath>
+  <image width="100" height="100" clip-path="url(#c)" href="data:image/webp;base64,${photo}"/>
+</svg>
+`);
+  console.log(`testimonials/${name}.svg`);
 }
 
 const full = await fetchBuffer('speclynx-logo-full.png');

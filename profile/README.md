@@ -106,7 +106,6 @@ When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling ar
 <td width="50%" valign="middle">
 
 <a href="https://www.level250.com/"><img width="44" height="44" align="left" alt="Emmanuel Paraskakis" src="assets/testimonials/emmanuel-paraskakis.svg" /></a>
-
 **Emmanuel Paraskakis**<br/>
 <sub>Consultant, Trainer, Advisor · Founder, [Level 250](https://www.level250.com/)</sub>
 
@@ -114,7 +113,6 @@ When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling ar
 <td width="50%" valign="middle">
 
 <a href="https://usecommune.com/"><img width="44" height="44" align="left" alt="Fran Mendez" src="assets/testimonials/fran-mendez.svg" /></a>
-
 **Fran Mendez**<br/>
 <sub>AsyncAPI author · Building [usecommune.com](https://usecommune.com/)</sub>
 

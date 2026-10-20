@@ -6,6 +6,8 @@
 // - speclynx-logo-{light,dark}.png: branding/logo1.png from speclynx/speclynx with its white
 //   background removed; the dark variant renders the navy wordmark light and the navy inner
 //   mark a lighter navy, so it stays the logo's dark accent.
+// - speclynx-mark-{light,dark}.png: the same logos without the wordmark, for READMEs whose
+//   heading already names the project.
 // - <spec>-logo-dark.{svg,png}: spec logos with their dark wordmark rendered light,
 //   for GitHub dark mode. Light mode keeps using the originals from speclynx.com.
 // - ../testimonials/<name>.svg: testimonial photos cropped to a circle, as on speclynx.com
@@ -58,6 +60,12 @@ function whiteToAlpha(png, SOLID = 100) {
     for (let c = 0; c < 3; c++) d[i + c] = a ? Math.round(255 - (255 - d[i + c]) / a) : 0;
     d[i + 3] = Math.round(a * 255);
   }
+  return png;
+}
+
+// make every row from `y` down transparent
+function cutBelow(png, y) {
+  png.data.fill(0, y * png.width * 4);
   return png;
 }
 
@@ -138,3 +146,6 @@ const MARK_DARK = [0x1e, 0x5a, 0x8c];
 write('speclynx-logo-light.png', PNG.sync.write(half(crop(whiteToAlpha(PNG.sync.read(full)), 12))));
 write('speclynx-logo-dark.png', PNG.sync.write(half(crop(recolor(whiteToAlpha(PNG.sync.read(full)),
   (r, g, b, y) => luma(r, g, b) < 90 && (y < SPLIT_Y ? MARK_DARK : LIGHT)), 12))));
+write('speclynx-mark-light.png', PNG.sync.write(half(crop(cutBelow(whiteToAlpha(PNG.sync.read(full)), SPLIT_Y), 12))));
+write('speclynx-mark-dark.png', PNG.sync.write(half(crop(cutBelow(recolor(whiteToAlpha(PNG.sync.read(full)),
+  (r, g, b) => luma(r, g, b) < 90 && MARK_DARK), SPLIT_Y), 12))));

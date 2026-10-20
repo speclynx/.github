@@ -17,6 +17,12 @@ Parse, validate, transform, and lint **OpenAPI**, **AsyncAPI**, **Arazzo**, **Ov
 [![Discussions](https://img.shields.io/badge/Discussions-092B4E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/speclynx/discussions)
 [![License: Apache 2.0](https://img.shields.io/badge/Apache_2.0-092B4E?style=for-the-badge&logoColor=white)](https://github.com/orgs/speclynx/repositories)
 
+<br/>
+
+<a href="https://speclynx.com">
+  <img width="636" alt="SpecLynx logo" src="https://github.com/user-attachments/assets/1cfd6c8e-0206-4d53-9a2c-e4d10be84ca0" />
+</a>
+
 </div>
 
 <br/>
@@ -40,7 +46,7 @@ npx @speclynx/cli validate arazzo.yaml
 npx @speclynx/cli validate overlay.yaml
 ```
 
-<img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" />
+<img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="https://raw.githubusercontent.com/speclynx/.github/main/profile/assets/validate.svg" />
 
 Apply or generate overlays:
 
@@ -49,13 +55,9 @@ npx @speclynx/cli overlay apply add-contact.yaml openapi-v1.yaml
 npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
 ```
 
-<img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay.svg" />
+<img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="https://raw.githubusercontent.com/speclynx/.github/main/profile/assets/overlay.svg" />
 
 Prefer a UI? Open the [Editor](https://editor.speclynx.com) in your browser, or install the [OpenAPI Toolkit](https://speclynx.com/openapi-toolkit/) for VS Code. More in the [getting started guide](https://speclynx.com/docs/guides/getting-started/).
-
-<a href="https://editor.speclynx.com">
-  <img width="636" alt="SpecLynx editor and validation interface" src="https://github.com/user-attachments/assets/1cfd6c8e-0206-4d53-9a2c-e4d10be84ca0" />
-</a>
 
 ## The tools
 

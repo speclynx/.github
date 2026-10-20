@@ -1,8 +1,8 @@
 // Regenerates the terminal SVGs in profile/assets from real @speclynx/cli output.
 //
-// usage: node profile/assets/src/generate.mjs
+// usage: node profile/assets/src/generate.mjs   (SANDBOX=docker to force Docker)
 //
-// Requires Linux with bubblewrap (bwrap): the sample specs are mounted at /specs so
+// Requires bubblewrap (bwrap, Linux) or Docker: the sample specs are mounted at /specs so
 // absolute paths in CLI output (e.g. overlay `extends`) match the speclynx.com demos.
 // Colors mirror the terminal component on speclynx.com (assets/css/main.css).
 import { execFileSync } from 'node:child_process';
@@ -27,7 +27,7 @@ const SESSIONS = {
   overlay: {
     title: 'speclynx overlay',
     runs: [
-      { cmd: 'overlay apply', args: ['add-contact.yaml', 'openapi-v1.yaml'] },
+      { cmd: 'overlay apply', args: ['add-contact.yaml', 'museum.yaml'] },
       { cmd: 'overlay diff', args: ['openapi-v1.yaml', 'openapi-v2.yaml'] },
     ],
   },
@@ -46,15 +46,36 @@ const prefix = mkdtempSync(join(tmpdir(), 'speclynx-cli-'));
 execFileSync('npm', ['install', '--silent', '--prefix', prefix, `@speclynx/cli@${CLI_VERSION}`], { stdio: 'inherit' });
 const bin = join(prefix, 'node_modules', '.bin', 'speclynx');
 
-// run the CLI with SPECS mounted at /specs and a read-only view of the host system
-function run(cmd, args) {
-  const binds = ['/usr', '/bin', '/lib', '/lib64', '/sbin', '/etc', '/home', '/tmp', '/opt', prefix]
-    .filter(existsSync)
-    .flatMap((d) => ['--ro-bind', d, d]);
-  const argv = ['--tmpfs', '/', ...binds, '--proc', '/proc', '--dev', '/dev',
-    '--bind', SPECS, '/specs', '--chdir', '/specs', bin, ...cmd.split(' '), ...args];
+const has = (tool) => {
   try {
-    return execFileSync('bwrap', argv, { encoding: 'utf8', env: { ...process.env, FORCE_COLOR: '1' } });
+    execFileSync(tool, ['--version'], { stdio: 'ignore' });
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+// run the CLI with SPECS mounted at /specs: in a bwrap sandbox with a read-only view of
+// the host system, or in a Node container where bwrap is unavailable (or SANDBOX=docker)
+function sandbox(cliArgs) {
+  if (process.env.SANDBOX !== 'docker' && has('bwrap')) {
+    const binds = ['/usr', '/bin', '/lib', '/lib64', '/sbin', '/etc', '/home', '/tmp', '/opt', prefix]
+      .filter(existsSync)
+      .flatMap((d) => ['--ro-bind', d, d]);
+    return ['bwrap', ['--tmpfs', '/', ...binds, '--proc', '/proc', '--dev', '/dev',
+      '--bind', SPECS, '/specs', '--chdir', '/specs', bin, ...cliArgs]];
+  }
+  if (has('docker')) {
+    return ['docker', ['run', '--rm', '-e', 'FORCE_COLOR=1', '-v', `${prefix}:/cli:ro`, '-v', `${SPECS}:/specs:ro`,
+      '-w', '/specs', 'node:24-slim', '/cli/node_modules/.bin/speclynx', ...cliArgs]];
+  }
+  throw new Error('generate.mjs needs bubblewrap (bwrap) or Docker');
+}
+
+function run(cmd, args) {
+  const [tool, argv] = sandbox([...cmd.split(' '), ...args]);
+  try {
+    return execFileSync(tool, argv, { encoding: 'utf8', env: { ...process.env, FORCE_COLOR: '1' } });
   } catch (e) {
     return e.stdout; // validation problems exit non-zero
   }

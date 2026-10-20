@@ -1,6 +1,11 @@
 <div align="center">
 
-<h1>SpecLynx</h1>
+<a href="https://speclynx.com">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logos/speclynx-logo-dark.png" />
+    <img width="280" alt="SpecLynx" src="assets/logos/speclynx-logo-light.png" />
+  </picture>
+</a>
 
 ### One toolchain for every API spec
 
@@ -15,35 +20,25 @@ Parse, validate, transform, and lint **OpenAPI**, **AsyncAPI**, **Arazzo**, **Ov
 
 [![Try the Editor](https://img.shields.io/badge/Try_the_Editor-092B4E?style=for-the-badge&logoColor=white)](https://editor.speclynx.com)
 [![Discussions](https://img.shields.io/badge/Discussions-092B4E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/speclynx/discussions)
-[![License: Apache 2.0](https://img.shields.io/badge/Apache_2.0-092B4E?style=for-the-badge&logoColor=white)](https://github.com/orgs/speclynx/repositories)
+[![License: Apache 2.0](https://img.shields.io/badge/Apache_2.0-092B4E?style=for-the-badge&logoColor=white)](https://github.com/speclynx/.github/blob/main/LICENSE)
 
 <br/>
-
-<a href="https://speclynx.com">
-  <img width="636" alt="SpecLynx logo" src="https://github.com/user-attachments/assets/1cfd6c8e-0206-4d53-9a2c-e4d10be84ca0" />
-</a>
-
-</div>
-
 <br/>
 
-<div align="center">
-  <a href="https://www.openapis.org/"><img height="36" alt="OpenAPI" src="https://speclynx.com/assets/images/logos/openapi-logo.png" /></a>&nbsp;&nbsp;
-  <a href="https://www.asyncapi.com/"><img height="36" alt="AsyncAPI" src="https://speclynx.com/assets/images/logos/asyncapi-logo.svg" /></a>&nbsp;&nbsp;
-  <a href="https://spec.openapis.org/arazzo/latest.html"><img height="36" alt="Arazzo" src="https://speclynx.com/assets/images/logos/arazzo-logo.png" /></a>&nbsp;&nbsp;
-  <a href="https://spec.openapis.org/overlay/latest.html"><img height="36" alt="Overlay" src="https://speclynx.com/assets/images/logos/overlay-logo.svg" /></a>&nbsp;&nbsp;
-  <a href="https://json-schema.org/"><img height="36" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" /></a>
+  <a href="https://www.openapis.org/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logos/openapi-logo-dark.png" /><img height="36" alt="OpenAPI" src="https://speclynx.com/assets/images/logos/openapi-logo.png" /></picture></a>&nbsp;&nbsp;
+  <a href="https://www.asyncapi.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logos/asyncapi-logo-dark.svg" /><img height="36" alt="AsyncAPI" src="https://speclynx.com/assets/images/logos/asyncapi-logo.svg" /></picture></a>&nbsp;&nbsp;
+  <a href="https://spec.openapis.org/arazzo/latest.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logos/arazzo-logo-dark.png" /><img height="36" alt="Arazzo" src="https://speclynx.com/assets/images/logos/arazzo-logo.png" /></picture></a>&nbsp;&nbsp;
+  <a href="https://spec.openapis.org/overlay/latest.html"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logos/overlay-logo-dark.svg" /><img height="36" alt="Overlay" src="https://speclynx.com/assets/images/logos/overlay-logo.svg" /></picture></a>&nbsp;&nbsp;
+  <a href="https://json-schema.org/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/logos/json-schema-logo-dark.svg" /><img height="36" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" /></picture></a>
+
 </div>
 
 ## Get started
 
-Validate any spec from the terminal. Nothing to install, no account:
+Validate any spec from the terminal. Nothing to install, no account. Works the same for OpenAPI, AsyncAPI, Arazzo, and Overlay:
 
 ```sh
 npx @speclynx/cli validate openapi.yaml
-npx @speclynx/cli validate asyncapi.yaml
-npx @speclynx/cli validate arazzo.yaml
-npx @speclynx/cli validate overlay.yaml
 ```
 
 <img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" />
@@ -51,7 +46,7 @@ npx @speclynx/cli validate overlay.yaml
 Apply or generate overlays:
 
 ```sh
-npx @speclynx/cli overlay apply add-contact.yaml openapi-v1.yaml
+npx @speclynx/cli overlay apply add-contact.yaml museum.yaml
 npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
 ```
 

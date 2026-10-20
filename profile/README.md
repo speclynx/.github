@@ -2,8 +2,8 @@
 
 <a href="https://speclynx.com">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logos/speclynx-logo-dark.png" />
-    <img width="280" alt="SpecLynx" src="assets/logos/speclynx-logo-light.png" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logos/speclynx-logo1-dark.png" />
+    <img width="280" alt="SpecLynx" src="assets/logos/speclynx-logo1-light.png" />
   </picture>
 </a>
 

@@ -1,9 +1,11 @@
-// Builds the logo variants in profile/assets/logos from the logos published on speclynx.com.
+// Builds the logo variants in profile/assets/logos from the SpecLynx branding and the logos
+// published on speclynx.com.
 //
-// usage: node profile/assets/src/logos.mjs
+// usage: node profile/assets/src/logos.mjs   (needs `gh` with access to speclynx/speclynx)
 //
-// - speclynx-logo-{light,dark}.png: the full logo with its white background removed;
-//   the dark variant renders the navy parts (wordmark, inner mark) light.
+// - speclynx-logo1-{light,dark}.png: branding/logo1.png from speclynx/speclynx with its white
+//   background removed; the dark variant renders the navy wordmark light and the navy inner
+//   mark a lighter navy, so it stays the logo's dark accent.
 // - <spec>-logo-dark.{svg,png}: spec logos with their dark wordmark rendered light,
 //   for GitHub dark mode. Light mode keeps using the originals from speclynx.com.
 // - ../testimonials/<name>.svg: testimonial photos cropped to a circle, as on speclynx.com
@@ -36,11 +38,13 @@ const SVG_DARK_COLORS = {
   'json-schema-logo.svg': ['#1c1e21'],
 };
 
-// recolor pixels matching `match` to LIGHT, keeping alpha (antialiasing survives)
-function recolor(png, match) {
+// recolor pixels to the color `pick` returns for them (none: unchanged), keeping alpha
+// so antialiasing survives
+function recolor(png, pick) {
   const d = png.data;
   for (let i = 0; i < d.length; i += 4) {
-    if (d[i + 3] && match(d[i], d[i + 1], d[i + 2])) [d[i], d[i + 1], d[i + 2]] = LIGHT;
+    const color = d[i + 3] && pick(d[i], d[i + 1], d[i + 2], Math.floor(i / 4 / png.width));
+    if (color) [d[i], d[i + 1], d[i + 2]] = color;
   }
   return png;
 }
@@ -73,6 +77,26 @@ function crop(png, pad = 4) {
   return out;
 }
 
+// halve the size with a 2x2 box filter, averaging color weighted by alpha
+function half(png) {
+  const out = new PNG({ width: png.width >> 1, height: png.height >> 1 });
+  for (let y = 0; y < out.height; y++) {
+    for (let x = 0; x < out.width; x++) {
+      const acc = [0, 0, 0, 0];
+      for (const [dx, dy] of [[0, 0], [1, 0], [0, 1], [1, 1]]) {
+        const i = ((2 * y + dy) * png.width + 2 * x + dx) * 4;
+        const a = png.data[i + 3];
+        for (let c = 0; c < 3; c++) acc[c] += png.data[i + c] * a;
+        acc[3] += a;
+      }
+      const o = (y * out.width + x) * 4;
+      for (let c = 0; c < 3; c++) out.data[o + c] = acc[3] ? Math.round(acc[c] / acc[3]) : 0;
+      out.data[o + 3] = Math.round(acc[3] / 4);
+    }
+  }
+  return out;
+}
+
 const neutralDark = (r, g, b) => Math.max(r, g, b) < 150 && Math.max(r, g, b) - Math.min(r, g, b) < 48;
 const luma = (r, g, b) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
 
@@ -89,7 +113,7 @@ for (const [name, colors] of Object.entries(SVG_DARK_COLORS)) {
 }
 
 for (const name of ['openapi-logo.png', 'arazzo-logo.png']) {
-  write(name.replace('.png', '-dark.png'), PNG.sync.write(recolor(PNG.sync.read(await fetchBuffer(name)), neutralDark)));
+  write(name.replace('.png', '-dark.png'), PNG.sync.write(recolor(PNG.sync.read(await fetchBuffer(name)), (r, g, b) => neutralDark(r, g, b) && LIGHT)));
 }
 
 const TESTIMONIALS = join(OUT, '..', 'testimonials');
@@ -106,6 +130,11 @@ for (const name of ['emmanuel-paraskakis', 'fran-mendez']) {
   console.log(`testimonials/${name}.svg`);
 }
 
-const full = await fetchBuffer('speclynx-logo-full.png');
-write('speclynx-logo-light.png', PNG.sync.write(crop(whiteToAlpha(PNG.sync.read(full)))));
-write('speclynx-logo-dark.png', PNG.sync.write(crop(recolor(whiteToAlpha(PNG.sync.read(full)), (r, g, b) => luma(r, g, b) < 90))));
+// 2048px original; the inner mark sits above SPLIT_Y, the wordmark below it
+const full = execFileSync('gh', ['api', '-H', 'Accept: application/vnd.github.raw',
+  'repos/speclynx/speclynx/contents/branding/logo1.png'], { maxBuffer: 64 * 1024 * 1024 });
+const SPLIT_Y = 1134;
+const MARK_DARK = [0x1e, 0x5a, 0x8c];
+write('speclynx-logo1-light.png', PNG.sync.write(half(crop(whiteToAlpha(PNG.sync.read(full)), 12))));
+write('speclynx-logo1-dark.png', PNG.sync.write(half(crop(recolor(whiteToAlpha(PNG.sync.read(full)),
+  (r, g, b, y) => luma(r, g, b) < 90 && (y < SPLIT_Y ? MARK_DARK : LIGHT)), 12))));

@@ -1,0 +1,11 @@
+overlay: 1.0.0
+info:
+  title: Museum API overlay
+  version: 1.0.0
+actions:
+  - target: $.info
+    update:
+      contact:
+        email: api@museum.example
+  - target: $.paths['/legacy']
+    remove: yes

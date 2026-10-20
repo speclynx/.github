@@ -2,21 +2,20 @@
 
 <h1>SpecLynx</h1>
 
-### Enterprise-ready API tooling
+### One toolchain for every API spec
 
-Parse, validate, transform, and work with **OpenAPI**, **AsyncAPI**, **Arazzo**, **Overlay**, and **JSON Schema** — using one consistent toolchain.
+Parse, validate, transform, and lint **OpenAPI**, **AsyncAPI**, **Arazzo**, **Overlay**, and **JSON Schema** through one shared semantic structure. Local-first and lossless.
+
+<sub>Built by long-time maintainers of Swagger UI and Swagger Editor, OpenAPI Initiative contributors, and AsyncAPI spec maintainers.</sub>
 
 <br/>
+<br/>
 
-[![Website](https://img.shields.io/badge/Website-speclynx.com-3A97CC?style=for-the-badge&logoColor=white)](https://speclynx.com)
+<p><a href="https://speclynx.com/docs/guides/getting-started/"><img height="34" alt="Get started" src="https://img.shields.io/badge/Get_started_%E2%86%92-3A97CC?style=for-the-badge" /></a></p>
+
 [![Try the Editor](https://img.shields.io/badge/Try_the_Editor-092B4E?style=for-the-badge&logoColor=white)](https://editor.speclynx.com)
 [![Discussions](https://img.shields.io/badge/Discussions-092B4E?style=for-the-badge&logo=github&logoColor=white)](https://github.com/orgs/speclynx/discussions)
-
-<br/>
-
-<a href="https://speclynx.com">
-  <img width="636" alt="SpecLynx editor and validation interface" src="https://github.com/user-attachments/assets/1cfd6c8e-0206-4d53-9a2c-e4d10be84ca0" />
-</a>
+[![License: Apache 2.0](https://img.shields.io/badge/Apache_2.0-092B4E?style=for-the-badge&logoColor=white)](https://github.com/orgs/speclynx/repositories)
 
 </div>
 
@@ -30,27 +29,54 @@ Parse, validate, transform, and work with **OpenAPI**, **AsyncAPI**, **Arazzo**,
   <a href="https://json-schema.org/"><img height="36" alt="JSON Schema" src="https://speclynx.com/assets/images/logos/json-schema-logo.svg" /></a>
 </div>
 
-## Products
+## Get started
 
-SpecLynx builds parsers, semantic data models, and intelligent editing tools for API specifications — from a low-level semantic parser all the way up to a browser-based editor.
+Validate any spec from the terminal. Nothing to install, no account:
 
-| Product | Description |
-| :------ | :---------- |
-| [**Editor**](https://editor.speclynx.com) | A browser-based editor for authoring and validating API specifications with real-time feedback. |
-| [**OpenAPI Toolkit**](https://github.com/speclynx/vscode-openapi-toolkit) | A free VSCode extension for API specification authoring with real-time validation, semantic linting, autocompletion, and live preview. Supports Swagger 2.0, OpenAPI 3.0.x, OpenAPI 3.1.x, AsyncAPI 2.x, and Arazzo 1.x. |
-| [**CLI**](https://speclynx.com/cli/) | A command-line tool for processing API specifications. Ships `overlay apply` and `overlay diff` today, with `validate`, `dereference`, `bundle`, and `convert` on the roadmap. |
-| [**Language Service**](https://speclynx.com/language-service/) | An LSP-compatible library that brings API spec intelligence to any editor or tool. 12+ LSP features including validation, completion, hover, go-to-definition, and find references. |
-| [**ApiDOM**](https://github.com/speclynx/apidom) | A semantic parser that turns any supported API description into a unified data model. Lossless, error-recovery capable, and built on Tree-sitter. |
+```sh
+npx @speclynx/cli validate openapi.yaml
+npx @speclynx/cli validate asyncapi.yaml
+npx @speclynx/cli validate arazzo.yaml
+npx @speclynx/cli validate overlay.yaml
+```
 
-## Why SpecLynx
+<img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" />
 
-Teams end up with separate scripts for bundling, linting, converting, and releasing specs — leading to duplicated logic, inconsistent checks, and fragile automation. SpecLynx replaces that with one toolchain:
+Apply or generate overlays:
 
-- **One consistent toolchain** — the same validation, normalization, and transformation logic across editors, CI pipelines, review workflows, and internal platforms.
-- **Multi-spec by design** — OpenAPI, AsyncAPI, Arazzo, Overlay, and JSON Schema, in JSON or YAML, all through one semantic model.
-- **Programmable layer** — a foundation for developer platforms, documentation systems, governance workflows, and custom specification tooling.
+```sh
+npx @speclynx/cli overlay apply add-contact.yaml openapi-v1.yaml
+npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
+```
 
-### Local-first by default
+<img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay.svg" />
+
+Prefer a UI? Open the [Editor](https://editor.speclynx.com) in your browser, or install the [OpenAPI Toolkit](https://speclynx.com/openapi-toolkit/) for VS Code. More in the [getting started guide](https://speclynx.com/docs/guides/getting-started/).
+
+<a href="https://editor.speclynx.com">
+  <img width="636" alt="SpecLynx editor and validation interface" src="https://github.com/user-attachments/assets/1cfd6c8e-0206-4d53-9a2c-e4d10be84ca0" />
+</a>
+
+## The tools
+
+SpecLynx combines core tooling, developer workflows, and editing surfaces into one consistent stack, plus a workflow toolkit built on top of it. All of it is open source under Apache 2.0.
+
+| Tool | What it does | Type |
+| :--- | :----------- | :--- |
+| [**CLI**](https://speclynx.com/cli/) | Validate specs and apply overlays from the terminal and CI. | Command line |
+| [**Editor**](https://speclynx.com/editor/) | Write and validate specs in the browser, nothing to install. | Browser editor |
+| [**OpenAPI Toolkit**](https://speclynx.com/openapi-toolkit/) | Validation, completion, and preview while you author specs. | VS Code extension |
+| [**Language Service**](https://speclynx.com/language-service/) | LSP intelligence for API specs, in any editor or platform. | Integration library |
+| [**ApiDOM**](https://speclynx.com/apidom/) | Parse, dereference, and bundle any API spec through one lossless semantic structure. | Core library |
+| [**UseArazzo**](https://usearazzo.com) | Validate, run, and trace Arazzo API workflows. Built on SpecLynx. | Workflow toolkit |
+
+## Why SpecLynx is different
+
+Your API specs may be standardized, but the tooling around them rarely is. Every format and version brings its own validator, linter, and converter, and every job brings another script in CI. The result is duplicated logic, checks that disagree, and fragile automation around the contracts your systems depend on.
+
+- **One semantic structure, not five parsers** — every spec is parsed into [ApiDOM](https://speclynx.com/apidom/), one lossless, error-recovering structure with the semantics of each specification layered on top. Tools built on it behave the same way across every supported spec.
+- **Local-first, always** — runs on your machine. No accounts, no telemetry, and it works offline. Your specs never leave your environment. [Read the manifesto →](https://speclynx.com/manifesto/)
+- **Built by the people who built the ecosystem** — the team behind years of core Swagger, OpenAPI, and AsyncAPI tooling. [Meet the team →](https://speclynx.com/about/)
 
 <p align="left">
   <img alt="Runs locally" src="https://img.shields.io/badge/Runs_locally-3A97CC?style=for-the-badge" />
@@ -59,17 +85,23 @@ Teams end up with separate scripts for bundling, linting, converting, and releas
   <img alt="No telemetry" src="https://img.shields.io/badge/No_telemetry-092B4E?style=for-the-badge" />
 </p>
 
-## Who we are
+## What people say
 
-SpecLynx was founded by [Vladimir Gorej](https://vladimirgorej.com/) and [Francesco Tumanischvili](https://github.com/frantuma), two industry veterans with over 15 years of combined experience building and maintaining core tools in the Swagger/OpenAPI ecosystem.
+> Since my days at Apiary and Swagger, I've been looking for OpenAPI tooling I'd actually recommend. SpecLynx is it, and no wonder: it's built by many of the same people. The editor, CLI, and VS Code extension share one engine, so the whole toolchain just makes sense. I'll be using it in my consulting and training.
+>
+> — **Emmanuel Paraskakis**, Consultant, Trainer, Advisor · Founder, [Level 250](https://www.level250.com/)
 
-## Join the discussion
+> When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling around it: every standard got its own parser, validator and set of quirks. SpecLynx is the toolchain I wish had existed back then, with one consistent model across OpenAPI, AsyncAPI and Arazzo.
+>
+> — **Fran Mendez**, AsyncAPI author · Building [usecommune.com](https://usecommune.com/)
 
-Have questions or want to share your thoughts? Join our [Discussions](https://github.com/orgs/speclynx/discussions) to engage with the community.
+## Built in the open
+
+SpecLynx is open source under Apache 2.0. Contributions and questions are welcome — star a repo, open an issue, or join the [Discussions](https://github.com/orgs/speclynx/discussions).
 
 ## Get help from the maintainers
 
-SpecLynx is free to use. We can help developers and teams integrate the tooling, standardize API and workflow specifications, and adopt it across their platform.
+SpecLynx is free to use. We help developers and teams integrate the tooling, standardize API and workflow specifications, and adopt it across their platform.
 
 - **Website**: https://speclynx.com
 - **Email**: info@speclynx.com
@@ -77,5 +109,5 @@ SpecLynx is free to use. We can help developers and teams integrate the tooling,
 ---
 
 <div align="center">
-  <sub>Join the SpecLynx community and take your API development to the next level.</sub>
+  <sub><a href="https://speclynx.com/docs/">Docs</a> · <a href="https://speclynx.com/blog/">Blog</a> · <a href="https://speclynx.com/manifesto/">Manifesto</a> · <a href="https://www.linkedin.com/company/speclynx">LinkedIn</a> · <a href="mailto:info@speclynx.com">Contact</a></sub>
 </div>

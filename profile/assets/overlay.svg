@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="795" height="666" viewBox="0 0 795 666" role="img" aria-label="speclynx overlay">
+  <clipPath id="w"><rect width="795" height="666" rx="8"/></clipPath>
+  <g clip-path="url(#w)">
+    <rect width="795" height="666" fill="#1F2937"/>
+    <rect width="795" height="36" fill="#111827"/>
+    <rect y="35" width="795" height="1" fill="#374151"/>
+  </g>
+  <circle cx="20" cy="18" r="5.5" fill="#FF5F56"/><circle cx="38" cy="18" r="5.5" fill="#FFBD2E"/><circle cx="56" cy="18" r="5.5" fill="#27C93F"/>
+  <text x="74" y="22" fill="#9CA3AF" font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="12">speclynx overlay</text>
+  <g font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="14" xml:space="preserve">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli overlay apply </text><text x="308.6" y="70" fill="#C9D1D9">add-contact.yaml openapi-v1.yaml</text>
+    <text x="22.0" y="92" fill="#E5E7EB">openapi: 3.1.0</text>
+    <text x="22.0" y="114" fill="#E5E7EB">info:</text>
+    <text x="38.9" y="136" fill="#E5E7EB">title: Museum API</text>
+    <text x="38.9" y="158" fill="#E5E7EB">version: 1.0.0</text>
+    <text x="38.9" y="180" fill="#E5E7EB">contact:</text>
+    <text x="55.7" y="202" fill="#E5E7EB">email: api@museum.example</text>
+    <text x="22.0" y="224" fill="#E5E7EB">paths:</text>
+    <text x="38.9" y="246" fill="#E5E7EB">/tickets:</text>
+    <text x="55.7" y="268" fill="#E5E7EB">get:</text>
+    <text x="72.6" y="290" fill="#E5E7EB">operationId: listTickets</text>
+    <text x="72.6" y="312" fill="#E5E7EB">responses:</text>
+    <text x="89.4" y="334" fill="#E5E7EB">'200':</text>
+    <text x="106.3" y="356" fill="#E5E7EB">description: OK</text>
+    
+    <text x="22.0" y="400" fill="#AEB6C2">$ </text><text x="38.9" y="400" fill="#34D399" font-weight="700">npx @speclynx/cli overlay diff </text><text x="300.2" y="400" fill="#C9D1D9">openapi-v1.yaml openapi-v2.yaml</text>
+    <text x="22.0" y="422" fill="#E5E7EB">overlay: 1.2.0</text>
+    <text x="22.0" y="444" fill="#E5E7EB">info:</text>
+    <text x="38.9" y="466" fill="#E5E7EB">title: API diff</text>
+    <text x="38.9" y="488" fill="#E5E7EB">version: 0.0.0</text>
+    <text x="22.0" y="510" fill="#E5E7EB">extends: /specs/openapi-v1.yaml</text>
+    <text x="22.0" y="532" fill="#E5E7EB">actions:</text>
+    <text x="38.9" y="554" fill="#E5E7EB">- target: $['info']</text>
+    <text x="55.7" y="576" fill="#E5E7EB">update:</text>
+    <text x="72.6" y="598" fill="#E5E7EB">description: Buy and manage museum tickets.</text>
+    <text x="38.9" y="620" fill="#E5E7EB">- target: $['info']['version']</text>
+    <text x="55.7" y="642" fill="#E5E7EB">update: 1.1.0</text>
+  </g>
+</svg>

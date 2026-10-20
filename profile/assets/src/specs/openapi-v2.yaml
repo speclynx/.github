@@ -1,0 +1,12 @@
+openapi: 3.1.0
+info:
+  title: Museum API
+  version: 1.1.0
+  description: Buy and manage museum tickets.
+paths:
+  /tickets:
+    get:
+      operationId: listTickets
+      responses:
+        '200':
+          description: OK

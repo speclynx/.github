@@ -35,10 +35,13 @@ Parse, validate, transform, and lint **OpenAPI**, **AsyncAPI**, **Arazzo**, **Ov
 
 ## Get started
 
-Validate any spec from the terminal. Nothing to install, no account. Works the same for OpenAPI, AsyncAPI, Arazzo, and Overlay:
+Validate any spec from the terminal. Nothing to install, no account:
 
 ```sh
 npx @speclynx/cli validate openapi.yaml
+npx @speclynx/cli validate asyncapi.yaml
+npx @speclynx/cli validate arazzo.yaml
+npx @speclynx/cli validate overlay.yaml
 ```
 
 <a href="https://speclynx.com/cli/"><img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" /></a>

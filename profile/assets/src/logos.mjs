@@ -3,7 +3,7 @@
 //
 // usage: node profile/assets/src/logos.mjs   (needs `gh` with access to speclynx/speclynx)
 //
-// - speclynx-logo1-{light,dark}.png: branding/logo1.png from speclynx/speclynx with its white
+// - speclynx-logo-{light,dark}.png: branding/logo1.png from speclynx/speclynx with its white
 //   background removed; the dark variant renders the navy wordmark light and the navy inner
 //   mark a lighter navy, so it stays the logo's dark accent.
 // - <spec>-logo-dark.{svg,png}: spec logos with their dark wordmark rendered light,
@@ -135,6 +135,6 @@ const full = execFileSync('gh', ['api', '-H', 'Accept: application/vnd.github.ra
   'repos/speclynx/speclynx/contents/branding/logo1.png'], { maxBuffer: 64 * 1024 * 1024 });
 const SPLIT_Y = 1134;
 const MARK_DARK = [0x1e, 0x5a, 0x8c];
-write('speclynx-logo1-light.png', PNG.sync.write(half(crop(whiteToAlpha(PNG.sync.read(full)), 12))));
-write('speclynx-logo1-dark.png', PNG.sync.write(half(crop(recolor(whiteToAlpha(PNG.sync.read(full)),
+write('speclynx-logo-light.png', PNG.sync.write(half(crop(whiteToAlpha(PNG.sync.read(full)), 12))));
+write('speclynx-logo-dark.png', PNG.sync.write(half(crop(recolor(whiteToAlpha(PNG.sync.read(full)),
   (r, g, b, y) => luma(r, g, b) < 90 && (y < SPLIT_Y ? MARK_DARK : LIGHT)), 12))));

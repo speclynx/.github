@@ -143,9 +143,11 @@ const full = execFileSync('gh', ['api', '-H', 'Accept: application/vnd.github.ra
   'repos/speclynx/speclynx/contents/branding/logo1.png'], { maxBuffer: 64 * 1024 * 1024 });
 const SPLIT_Y = 1134;
 const MARK_DARK = [0x1e, 0x5a, 0x8c];
+// blank rows 1158-1244 separate the mark from the wordmark; cut in the middle of them
+const MARK_BOTTOM = 1200;
 write('speclynx-logo-light.png', PNG.sync.write(half(crop(whiteToAlpha(PNG.sync.read(full)), 12))));
 write('speclynx-logo-dark.png', PNG.sync.write(half(crop(recolor(whiteToAlpha(PNG.sync.read(full)),
   (r, g, b, y) => luma(r, g, b) < 90 && (y < SPLIT_Y ? MARK_DARK : LIGHT)), 12))));
-write('speclynx-mark-light.png', PNG.sync.write(half(crop(cutBelow(whiteToAlpha(PNG.sync.read(full)), SPLIT_Y), 12))));
+write('speclynx-mark-light.png', PNG.sync.write(half(crop(cutBelow(whiteToAlpha(PNG.sync.read(full)), MARK_BOTTOM), 12))));
 write('speclynx-mark-dark.png', PNG.sync.write(half(crop(cutBelow(recolor(whiteToAlpha(PNG.sync.read(full)),
-  (r, g, b) => luma(r, g, b) < 90 && MARK_DARK), SPLIT_Y), 12))));
+  (r, g, b) => luma(r, g, b) < 90 && MARK_DARK), MARK_BOTTOM), 12))));

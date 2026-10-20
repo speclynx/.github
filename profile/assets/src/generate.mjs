@@ -206,6 +206,6 @@ for (const { name, session, frames } of rendered) {
   </g>
 </svg>
 `;
-  writeFileSync(join(OUT, `${name}.svg`), svg);
-  console.log(`${name}.svg ${W}x${H}`);
+  writeFileSync(join(OUT, `${name}-demo.svg`), svg);
+  console.log(`${name}-demo.svg ${W}x${H}`);
 }

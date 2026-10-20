@@ -44,7 +44,7 @@ npx @speclynx/cli validate arazzo.yaml
 npx @speclynx/cli validate overlay.yaml
 ```
 
-<a href="https://speclynx.com/cli/"><img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate.svg" /></a>
+<a href="https://speclynx.com/cli/"><img alt="speclynx validate reporting problems with line ranges and rule codes in OpenAPI, AsyncAPI, Arazzo, and Overlay documents" src="assets/validate-demo.svg" /></a>
 
 Apply or generate overlays:
 
@@ -53,7 +53,7 @@ npx @speclynx/cli overlay apply add-contact.yaml museum.yaml
 npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml
 ```
 
-<a href="https://speclynx.com/cli/"><img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay.svg" /></a>
+<a href="https://speclynx.com/cli/"><img alt="speclynx overlay apply adding a contact to an OpenAPI document, and overlay diff generating an Overlay document from two OpenAPI versions" src="assets/overlay-demo.svg" /></a>
 
 Prefer a UI? Open the [SpecLynx Editor](https://editor.speclynx.com) in your browser, or install the [OpenAPI Toolkit](https://speclynx.com/openapi-toolkit/) for VS Code. More in the [getting started guide](https://speclynx.com/docs/guides/getting-started/).
 

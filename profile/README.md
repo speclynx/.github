@@ -73,9 +73,9 @@ SpecLynx combines core tooling, developer workflows, and editing surfaces into o
 
 Your API specs may be standardized, but the tooling around them rarely is. Every format and version brings its own validator, linter, and converter, and every job brings another script in CI. The result is duplicated logic, checks that disagree, and fragile automation around the contracts your systems depend on.
 
-- **One semantic structure, not five parsers** — every spec is parsed into [ApiDOM](https://speclynx.com/apidom/), one lossless, error-recovering structure with the semantics of each specification layered on top. Tools built on it behave the same way across every supported spec.
-- **Local-first, always** — runs on your machine. No accounts, no telemetry, and it works offline. Your specs never leave your environment. [Read the manifesto →](https://speclynx.com/manifesto/)
-- **Built by the people who built the ecosystem** — the team behind years of core Swagger, OpenAPI, and AsyncAPI tooling. [Meet the team →](https://speclynx.com/about/)
+- **One semantic structure, not five parsers.** Every spec is parsed into [ApiDOM](https://speclynx.com/apidom/), one lossless, error-recovering structure with the semantics of each specification layered on top. Tools built on it behave the same way across every supported spec.
+- **Local-first, always.** Runs on your machine. No accounts, no telemetry, and it works offline. Your specs never leave your environment. [Read the manifesto →](https://speclynx.com/manifesto/)
+- **Built by the people who built the ecosystem.** We have spent years building core Swagger, OpenAPI, and AsyncAPI tooling. [Meet the team →](https://speclynx.com/about/)
 
 <p align="left">
   <a href="https://speclynx.com/manifesto/"><img alt="Runs locally" src="https://img.shields.io/badge/Runs_locally-3A97CC?style=for-the-badge" /></a>
@@ -113,7 +113,7 @@ When I started AsyncAPI, the hardest part wasn't the spec. It was the tooling ar
 
 ## Built in the open
 
-SpecLynx is open source under Apache 2.0. Contributions and questions are welcome — star a repo, open an issue, or join the [Discussions](https://github.com/orgs/speclynx/discussions).
+SpecLynx is open source under Apache 2.0. Contributions and questions are welcome: star a repo, open an issue, or join the [Discussions](https://github.com/orgs/speclynx/discussions).
 
 ## Get help from the maintainers
 

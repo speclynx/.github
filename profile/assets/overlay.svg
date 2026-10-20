@@ -1,14 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="795" height="534" viewBox="0 0 795 534" role="img" aria-label="speclynx overlay">
-  <clipPath id="w"><rect width="795" height="534" rx="8"/></clipPath>
+<svg xmlns="http://www.w3.org/2000/svg" width="795" height="336" viewBox="0 0 795 336" role="img" aria-label="speclynx overlay: npx @speclynx/cli overlay apply add-contact.yaml museum.yaml, npx @speclynx/cli overlay diff openapi-v1.yaml openapi-v2.yaml">
+  <style>
+    @keyframes f0{0%,48.133%{opacity:1}48.140%,100%{opacity:0}}
+    @keyframes t0{0%,4.073%{transform:translateX(0);animation-timing-function:steps(60,end)}18.330%,100%{transform:translateX(505.8px)}}
+    @keyframes o0{0%,20.706%{opacity:0}20.713%,100%{opacity:1}}
+    @keyframes c0{0%,20.706%{opacity:1}20.713%,100%{opacity:0}}
+    .f0{animation:f0 14.73s linear infinite}.t0{animation:t0 14.73s linear infinite}.o0{animation:o0 14.73s linear infinite}.c0{animation:c0 14.73s linear infinite}
+    @keyframes f1{0%,48.133%{opacity:0}48.140%,100.000%{opacity:1}100.007%,100%{opacity:0}}
+    @keyframes t1{0%,52.206%{transform:translateX(0);animation-timing-function:steps(62,end)}66.938%,100%{transform:translateX(522.7px)}}
+    @keyframes o1{0%,69.314%{opacity:0}69.321%,100%{opacity:1}}
+    @keyframes c1{0%,69.314%{opacity:1}69.321%,100%{opacity:0}}
+    .f1{animation:f1 14.73s linear infinite}.t1{animation:t1 14.73s linear infinite}.o1{animation:o1 14.73s linear infinite}.c1{animation:c1 14.73s linear infinite}
+    .blink{animation:blink 1s steps(2,start) infinite}
+    @keyframes blink{to{visibility:hidden}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+  </style>
+  <clipPath id="w"><rect width="795" height="336" rx="8"/></clipPath>
   <g clip-path="url(#w)">
-    <rect width="795" height="534" fill="#1F2937"/>
+    <rect width="795" height="336" fill="#1F2937"/>
     <rect width="795" height="36" fill="#111827"/>
     <rect y="35" width="795" height="1" fill="#374151"/>
   </g>
   <circle cx="20" cy="18" r="5.5" fill="#FF5F56"/><circle cx="38" cy="18" r="5.5" fill="#FFBD2E"/><circle cx="56" cy="18" r="5.5" fill="#27C93F"/>
   <text x="74" y="22" fill="#9CA3AF" font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="12">speclynx overlay</text>
   <g font-family="'Fira Code',Monaco,Consolas,ui-monospace,SFMono-Regular,Menlo,'Liberation Mono',monospace" font-size="14" xml:space="preserve">
+  <g class="f0">
     <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli overlay apply </text><text x="308.6" y="70" fill="#C9D1D9">add-contact.yaml museum.yaml</text>
+    <g class="t0" transform="translate(505.8 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c0" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o0">
     <text x="22.0" y="92" fill="#E5E7EB">openapi: 3.1.0</text>
     <text x="22.0" y="114" fill="#E5E7EB">info:</text>
     <text x="38.9" y="136" fill="#E5E7EB">title: Museum API</text>
@@ -16,18 +37,27 @@
     <text x="38.9" y="180" fill="#E5E7EB">contact:</text>
     <text x="55.7" y="202" fill="#E5E7EB">email: api@museum.example</text>
     <text x="22.0" y="224" fill="#E5E7EB">paths: {}</text>
-    
-    <text x="22.0" y="268" fill="#AEB6C2">$ </text><text x="38.9" y="268" fill="#34D399" font-weight="700">npx @speclynx/cli overlay diff </text><text x="300.2" y="268" fill="#C9D1D9">openapi-v1.yaml openapi-v2.yaml</text>
-    <text x="22.0" y="290" fill="#E5E7EB">overlay: 1.2.0</text>
-    <text x="22.0" y="312" fill="#E5E7EB">info:</text>
-    <text x="38.9" y="334" fill="#E5E7EB">title: API diff</text>
-    <text x="38.9" y="356" fill="#E5E7EB">version: 0.0.0</text>
-    <text x="22.0" y="378" fill="#E5E7EB">extends: /specs/openapi-v1.yaml</text>
-    <text x="22.0" y="400" fill="#E5E7EB">actions:</text>
-    <text x="38.9" y="422" fill="#E5E7EB">- target: $['info']</text>
-    <text x="55.7" y="444" fill="#E5E7EB">update:</text>
-    <text x="72.6" y="466" fill="#E5E7EB">description: Buy and manage museum tickets.</text>
-    <text x="38.9" y="488" fill="#E5E7EB">- target: $['info']['version']</text>
-    <text x="55.7" y="510" fill="#E5E7EB">update: 1.1.0</text>
+    </g>
+  </g>
+  <g class="f1" opacity="0">
+    <text x="22.0" y="70" fill="#AEB6C2">$ </text><text x="38.9" y="70" fill="#34D399" font-weight="700">npx @speclynx/cli overlay diff </text><text x="300.2" y="70" fill="#C9D1D9">openapi-v1.yaml openapi-v2.yaml</text>
+    <g class="t1" transform="translate(522.7 0)">
+      <rect x="38.86" y="55" width="795" height="22" fill="#1F2937"/>
+      <g class="blink"><rect class="c1" x="38.86" y="56" width="8.4" height="18" fill="#E5E7EB" opacity="0"/></g>
+    </g>
+    <g class="o1">
+    <text x="22.0" y="92" fill="#E5E7EB">overlay: 1.2.0</text>
+    <text x="22.0" y="114" fill="#E5E7EB">info:</text>
+    <text x="38.9" y="136" fill="#E5E7EB">title: API diff</text>
+    <text x="38.9" y="158" fill="#E5E7EB">version: 0.0.0</text>
+    <text x="22.0" y="180" fill="#E5E7EB">extends: /specs/openapi-v1.yaml</text>
+    <text x="22.0" y="202" fill="#E5E7EB">actions:</text>
+    <text x="38.9" y="224" fill="#E5E7EB">- target: $['info']</text>
+    <text x="55.7" y="246" fill="#E5E7EB">update:</text>
+    <text x="72.6" y="268" fill="#E5E7EB">description: Buy and manage museum tickets.</text>
+    <text x="38.9" y="290" fill="#E5E7EB">- target: $['info']['version']</text>
+    <text x="55.7" y="312" fill="#E5E7EB">update: 1.1.0</text>
+    </g>
+  </g>
   </g>
 </svg>
